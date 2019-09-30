@@ -1,0 +1,27 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" media="all" href="{% static "evablog/About.css" %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="main">
+        <img src="{% static 'evablog/img/ewa-9.jpg'%}" class="main__photo">
+        <div class="text_wrapper">
+            <p class="main__text">
+                    Welcome to my blog and thank you for visiting! My name is Ewa, I like calling myself Londoner and that’s where my home is.
+            </p>
+            <p class="main__text">
+                    I come from Belarus (it’s in Eastern Europe, east to Poland and west to Russia – right in-between). I’m a full-time logistics professional who adores fashion, fitness and good food.
+            </p>
+            <p class="main__text">
+                    In my blog you’ll find a mix of my day-to-day life, hopefully some fashion inspiration and fitness motivation.
+            </p>
+            <p class="main__text">
+                    See what I’m up to today on <a href="https://www.instagram.com/ewagulida/">Instagram</a>.
+            </p>
+        </div>
+    </div>
+{% endblock content %}
+

@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block styles %}
+                <link rel="stylesheet" media="all" href="{% static "accounts/signup.css" %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="div-wrapper">
+        <p>SIGNUP</p>
+        <form class="site-form" action="{% url 'accounts:signup' %}" method="post">
+            {% csrf_token  %}
+            {{ form }}
+            <input type="submit" value="Signup">
+        </form>
+    </div>
+{% endblock content %}

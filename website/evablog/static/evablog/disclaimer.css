@@ -1,0 +1,29 @@
+.main{
+    width: 67%;
+    margin-left: 18%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.main__text{
+    margin-top: 0;
+    margin-left: 2%;
+    text-align: justify;
+}
+
+.normal_text{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.capitalized_letters{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+}

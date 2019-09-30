@@ -1,0 +1,31 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" media="all" href="{% static "evablog/disclaimer.css" %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="main">
+                <strong class="capitalized_letters">COPYRIGHT</strong>
+                <br>
+                <p class="normal_text">
+                    Everything you see on this website was created by me (Ewa Gulida) unless otherwise stated.
+                    Please do not use any photos or content without first asking my permission <a href="mailto:ewagulida@gmail.com">e-mail.</a>
+                </p>
+                <strong class="capitalized_letters">ADVERTISING</strong>
+                <br>
+                <p class="normal_text">
+                    Any paid for advertorials will be clearly stated (following ASA guidelines) at the bottom of blog posts, in the title of videos.
+                </p>
+                <p class="normal_text">
+                    To provide the best browsing experience, Enjoythesilence uses cookies and by visiting this site you are agreeing the use of cookies. For more information on the EU e-Privacy Directive or how to disable cookies please click <a href="http://www.southbourne.com/blog/2012/04/30/e-privacy-directive-websites/">this website</a>.
+                </p>
+                <strong class="capitalized_letters">RECOMMENDATION DISCLAIMER</strong>
+                <br>
+                <p class="normal_text">
+                    I only recommend products that I genuinely and honestly like but I cannot guarantee everything will work on all skin types. Please take into account your own skin type and allergies and wherever possible, test products out on yourself before purchasing.
+                </p>
+    </div>
+{% endblock content %}
+

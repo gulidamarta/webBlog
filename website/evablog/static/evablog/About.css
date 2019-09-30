@@ -1,0 +1,24 @@
+.main{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.main__photo{
+    width: 50%;
+}
+
+.main__text{
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 2%;
+    text-align: justify;
+    white-space: pre-line;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}

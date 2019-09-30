@@ -1,0 +1,49 @@
+.div-wrapper{
+    width: 60%;
+    margin-left: 19%;
+    margin-bottom: 1%;
+}
+
+.div-wrapper p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 5px 0 0 0;
+}
+
+.site-form li, .site-form span{
+    color: #524c4c;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.site-form label{
+     color: #524c4c;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    display: block;
+    font-size: 0.6em;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    color: #ff5722;
+    border: 1px solid #ff5722;
+}
+
+.errorlist{
+    padding: 0;
+}

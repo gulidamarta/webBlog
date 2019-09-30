@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" media="all" href="{% static "accounts/login.css" %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="login-div">
+        <p>LOGIN</p>
+        <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+            {% csrf_token  %}
+            {{ form }}
+            {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+            {% endif %}
+            <input type="submit" value="Login">
+        </form>
+    </div>
+{% endblock content %}

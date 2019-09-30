@@ -1,0 +1,133 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnjoyTheSilence</title>
+      {% load static %}
+    <link rel="stylesheet" media="all" href="{% static "evablog/MainPage.css" %}">
+      {% block styles %}
+      {% endblock styles %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <section class="site-title">
+        <p class="site-title__header">Enjoy The Silence</p>
+        <i class="site-title__subheader">Eva's blog</i>
+    </section>
+    <header class="top-menu">
+        <nav>
+            <ul>
+                <li class="top-menu__item">
+                    <i class="fas fa-bars"></i>
+                </li>
+                <li class="top-menu__item">
+                    <a href="{% url 'homepage' %}">home</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="{% url 'articles:list' %}">All posts</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="{% url 'aboutpage' %}">about</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="{% url 'contact' %}">contact</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="{% url 'disclaimer' %}">disclaimer</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="top-menu__item">
+                        <a href="#">
+                            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                                <button class="button_logout">LOGOUT</button>
+                            </form>
+                        </a>
+                    </li>
+                    <li class="top-menu__item">
+                        <a href="{% url 'articles:create' %}" class="create_article">New Article</a>
+                    </li>
+                {% else %}
+                    <li class="top-menu__item">
+                        <a href="{% url 'accounts:login' %}">Login</a>
+                    </li>
+                    <li class="top-menu__item">
+                        <a href="{% url 'accounts:signup' %}">Signup</a>
+                    </li>
+                {% endif %}
+                <li class="top-menu__item">
+                    <i class="fas fa-search"></i>
+                </li>
+                <li class="top-menu__item">
+                    <section class="top-menu__items--links">
+                        <a class="fab fa-telegram"></a>
+                        <a class="fab fa-instagram" href="https://www.instagram.com/ewagulida/"></a>
+                        <a class="fab fa-facebook" href="https://www.facebook.com/ewa.gulida/"></a>
+                        <a class="fab fa-pinterest"></a>
+                    </section>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <footer class="footer">
+        <section class="body-bottom">
+            <section class="body-bottom__snapchat">
+                <div class="body-bottom__snapchat--line">
+                    <span>INSTAGRAM</span>
+                </div>
+                <img src="{% static "evablog/img/instagram_1 .png" %}">
+            </section>
+            <section class="body-bottom__follow">
+                <div class="body-bottom__follow--line">
+                    <span>FOLLOW</span>
+                </div>
+                <section class="social-networks">
+                    <section class="social-networks__first">
+                        <a class="fab fa-twitter"></a>
+                        <a class="fab fa-instagram"></a>
+                        <a class="fab fa-facebook"></a>
+                    </section>
+                    <section class="social-networks__first-names">
+                        <span>TWITTER</span>
+                        <span>INSTAGRAM</span>
+                        <span>FACEBOOK</span>
+                    </section>
+                    <section class="social-networks__second">
+                        <a class="fab fa-pinterest"></a>
+                    </section>
+                    <section class="social-networks__second-names">
+                        <span>PINTEREST</span>
+                    </section>
+                </section>
+            </section>
+            <section class="body-bottom__follow">
+                <div class="body-bottom__follow--line">
+                    <span>ENJOY THE SILENCE</span>
+                </div>
+                <section class="body-bottom__follow--content">
+                    <span>Sign up here for a weekly catch up of everything EnjoyTheSilence</span>
+                    <input type="email" placeholder="Your email..." class="email">
+                    <input type="button" value="SUBSCRIBE" class="btn-subscribe">
+                </section>
+            </section>
+        </section>
+        <p class="site-footer">© 2019 EnjoyTheSilence</p>
+        <figure class="footer__pictures">
+            <img src="{% static "evablog/img/cookie.jpg" %}">
+            <img src="{% static "evablog/img/ewa-2.jpg" %}">
+            <img src="{% static "evablog/img/piones.jpg" %}">
+            <img src="{% static "evablog/img/view.jpg" %}">
+            <img src="{% static "evablog/img/ewa-4.jpg" %}">
+        </figure>
+        <p>Design by Marta Gulida</p>
+    </footer>
+</body>
+</html>

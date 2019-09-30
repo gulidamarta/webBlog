@@ -1,0 +1,12 @@
+.create-article{
+    width: 60%;
+    margin-left: 20%;
+    text-align: justify;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+

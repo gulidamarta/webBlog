@@ -1,0 +1,24 @@
+.login-div{
+    width: 60%;
+    margin-left: 19%;
+    text-align: justify;
+    margin-bottom: 2%;
+}
+
+.login-div p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+.site-form label, .site-form input{
+    color: #524c4c;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.site-form{
+    display: block;
+}

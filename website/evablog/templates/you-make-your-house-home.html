@@ -1,0 +1,38 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block styles %}
+            <link rel="stylesheet" media="all" href="{% static "evablog/you-make-your-house-home.css" %}">
+{% endblock styles %}
+
+{% block content %}
+      <figure class="head-photo">
+        <img src="{% static 'evablog/img/home.jpg' %}">
+      </figure>
+      <section class="main">
+        <p class="main__title">YOU MAKE A HOUSE A HOME</p>
+        <p class="main__date">8 SEPTEMBER 2017</p>
+        <article class="main__1">
+            <p>Feeling cosy and totally comfortable at home is an absolute must for me. If I do not – I start being moody, moany and so on – you do not want to deal with me in that state of mind.</p>
+            <p>When I first moved out of my parents’ house and into a student dorm I was stressed to say the least. During one day I moved to another city where I had no one, to the student dorm with poor conditions into the room which I had to share with two other girls who were complete strangers at the moment. I was overwhelmed and all I wanted to do was pack my stuff and go back to my bellowed home. But I did not.</p>
+            <p>I spent half a year moaning and pitting myself, crying and trying to convince my parents to let me rent an apartment (by let I mean ‘give me money’), but they didn’t budge. One day as I was particularly upset about something one of my friends asked how I liked living in a dorm. I did not. For the next half an hour (or even more) she became my shoulder to cry on and after that she gave me one of the most valuable pieces of advice I ever got:</p>
+        </article>
+        <p class="main__subtitle">You make a house your home. It’s always up to you.</p>
+        <article>
+            <p>
+                I lacked cosiness and utility my parents’ house provided. I gave it some thought, browsed Pinterest for ideas and made it feel like home. Surprisingly back then I needed a couple of postcards to hang on a wall, a plant to liven up a room and several photos of my friends and family to put on a bedside table.
+            </p>
+        </article>
+        <img src="{% static 'evablog/img/view-3.jpg' %}">
+        <article>
+            <p>These are such small details, but they have become a key to making me feel good.</p>
+        </article>
+        <img src="{% static 'evablog/img/home-1.jpg' %}">
+        <article>
+            <p>
+                    With this post I’ll start series of posts about interior inspirations (swooning over Pinterest & Instagram pictures) and what I do to get that much needed homey feeling in the apartment I’ve just moved into. So, hang on here and see what I’m up to. Hopefully I inspired or helped someone who knew smth was wrong, but didn’t realise what exactly. Please comment below if you have any tips or recommendations.
+            </p>
+        </article>
+        <img src="{% static 'evablog/img/home-1.png' %}">
+    </section>
+{% endblock content %}

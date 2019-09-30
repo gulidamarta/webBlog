@@ -1,0 +1,68 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block styles %}
+                <link rel="stylesheet" media="all" href="{% static "articles/article_list.css" %}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="articles">
+        {% for article in articles %}
+            <div class="article">
+                <img src="{{ article.thumb.url }}" class="article_image">
+                <div class="article_text_area">
+                    <div class="content_topic">
+                        <article class="content_line"></article>
+                        <div class="article_category">
+                            {{ article.category }}
+                        </div>
+                        <article class="content_line"></article>
+                    </div>
+                    <p class="article_slug">
+                        <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a>
+                    </p>
+                    <p class="article_snippet">{{ article.snippet }}</p>
+                    <input type="button" value="READ MORE" class="btnReadMore"/>
+                </div>
+                <p class="article_date">{{ article.date.day }}
+                    {% if article.date.month == 1 %}
+                        JANUARY
+                    {% endif %}
+                    {% if article.date.month == 2 %}
+                        FEBRUARY
+                    {% endif %}
+                    {% if article.date.month == 3 %}
+                        MARCH
+                    {% endif %}
+                    {% if article.date.month == 4 %}
+                        APRIL
+                    {% endif %}
+                    {% if article.date.month == 5 %}
+                        MAY
+                    {% endif %}
+                    {% if article.date.month == 6 %}
+                        JUNE
+                    {% endif %}
+                    {% if article.date.month == 7 %}
+                        JULY
+                    {% endif %}
+                    {% if article.date.month == 8 %}
+                        AUGUST
+                    {% endif %}
+                    {% if article.date.month == 9 %}
+                        SEPTEMBER
+                    {% endif %}
+                    {% if article.date.month == 10 %}
+                        OCTOBER
+                    {% endif %}
+                    {% if article.date.month == 11 %}
+                        NOVEMBER
+                    {% endif %}
+                    {% if article.date.month == 12 %}
+                        DECEMBER
+                    {% endif %}
+                    {{ article.date.year }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
