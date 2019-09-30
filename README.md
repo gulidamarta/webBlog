@@ -169,7 +169,7 @@ Find the `INSTALLED_APPS` and add the name of your app to the beginning of the l
 
 ``` python
 INSTALLED_APPS = (
-    'collection', # this is the app we added
+    'articles', # this is the app we added
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
